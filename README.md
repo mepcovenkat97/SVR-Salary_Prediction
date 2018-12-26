@@ -1,4 +1,4 @@
-# SVR-Social-N-w-Ads
+# SVR-Salary_Prediction
 
 This is a Support Vector Regressor used to predict the Salaries from the provided CSV
 
