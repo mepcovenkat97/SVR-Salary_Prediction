@@ -7,9 +7,13 @@ dataset = pd.read_csv("Position_Salaries.csv");
 x = dataset.iloc[:, 1:2].values
 y = dataset.iloc[:, 2].values
 
-#Splitting 
+#Splitting
 from sklearn.model_selection import train_test_split
 x_train,x_test,y_train,y_test = train_test_split(x,y,test_size =0.2,random_state = 0)
+x_train.reshape(-1,1)
+x_test.reshape(-1,1)
+y_train.reshape(-1,1)
+y_test.reshape(-1,1)
 
 #Feature Scaling
 from sklearn.preprocessing import StandardScaler
@@ -23,7 +27,7 @@ y_train = sc_Y.transform(y_test)
 #Fitting into SVR
 from sklearn.svm import SVR
 #'rbf' for non linear also use 'poly'
-regressor = SVR(gamma='scale', C=1.0, epsilon=0.2)
+regressor = SVR(gamma='scale', C=1.0, epsilon=0.2,degree = 3)
 regressor.fit(x,y)
 
 #Predicting new results
