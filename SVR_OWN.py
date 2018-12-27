@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
+import os
 
 #Reading dataset
 dataset = pd.read_csv("Position_Salaries.csv");
