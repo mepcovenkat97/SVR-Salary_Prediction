@@ -16,10 +16,10 @@ x_train,x_test,y_train,y_test = train_test_split(x,y,test_size =0.2,random_state
 from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler()
 x_train = sc_X.fit_transform(x_train)
-y_train = sc_X.transform(x_test)
+x_test = sc_X.transform(x_test)
 sc_Y = StandardScaler()
 y_train = sc_Y.fit_transform(y_train)
-y_train = sc_Y.transform(y_test)
+y_test = sc_Y.transform(y_test)
 
 #Fitting into SVR
 from sklearn.svm import SVR
