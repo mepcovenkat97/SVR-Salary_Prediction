@@ -23,7 +23,7 @@ y_test = sc_Y.transform(y_test)
 
 #Fitting into SVR
 from sklearn.svm import SVR
-#'rbf' for non linear also use 'poly'
+#by default 'rbf' for non linear also use 'poly'
 regressor = SVR(gamma='scale', C=1.0, epsilon=0.2,degree = 3)
 regressor.fit(x,y)
 
