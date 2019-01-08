@@ -2,6 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
+#Adding Comments
+
 #Reading dataset
 dataset = pd.read_csv("Position_Salaries.csv");
 x = dataset.iloc[:, 1:2].values
